@@ -6,8 +6,8 @@ from email.utils import COMMASPACE, formatdate
 from email import encoders
 import os
 
-USERNAME = "raspi.jay@gmail.com"
-PASSWORD = "jayjayjay"
+USERNAME = "sender's-email@gmail.com"
+PASSWORD = "email password"
 
 def sendMail(to, subject, text, files=[]):
     assert type(to)==list
@@ -36,5 +36,5 @@ def sendMail(to, subject, text, files=[]):
     server.sendmail(USERNAME, to, msg.as_string())
     server.quit()
 
-sendMail( ["jayg23697@gmail.com"],"Motion Detected by the camera","Someone is infront of the door, video attached",["/home/pi/Desktop/detected.mp4"] )
+sendMail( ["receiver's-email@gmail.com"],"Motion Detected by the camera","Someone is infront of the door, video attached",["/home/pi/Desktop/detected.mp4"] )
 
